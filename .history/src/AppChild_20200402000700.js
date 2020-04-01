@@ -32,6 +32,7 @@ class AppChild extends Component {
         console.log('prevState:',prevState)
         return 123
     }
+    
     render() { 
         console.log('子组件又渲染啦')
         return ( <div>

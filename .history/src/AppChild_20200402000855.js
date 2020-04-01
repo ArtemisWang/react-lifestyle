@@ -27,11 +27,11 @@ class AppChild extends Component {
     componentDidUpdate(prevProps,prevState,snapShot){
         console.log(snapShot)
     }
-    getSnapshotBeforeUpdate(prevProps,prevState){
-        console.log('prevProps:',prevProps)
-        console.log('prevState:',prevState)
-        return 123
-    }
+    // getSnapshotBeforeUpdate(prevProps,prevState){
+    //     console.log('prevProps:',prevProps)
+    //     console.log('prevState:',prevState)
+    //     return 123
+    // }
     render() { 
         console.log('子组件又渲染啦')
         return ( <div>

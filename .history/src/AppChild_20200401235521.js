@@ -24,13 +24,10 @@ class AppChild extends Component {
         }
         return null
     }
-    componentDidUpdate(prevProps,prevState,snapShot){
-        console.log(snapShot)
-    }
     getSnapshotBeforeUpdate(prevProps,prevState){
         console.log('prevProps:',prevProps)
         console.log('prevState:',prevState)
-        return 123
+        return null
     }
     render() { 
         console.log('子组件又渲染啦')

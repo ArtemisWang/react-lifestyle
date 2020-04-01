@@ -8,7 +8,14 @@ class App extends Component {
         }
         this.handleColor=this.handleColor.bind(this)
     }
-    
+    componentDidUpdate(prevProps,prevState,snapShot){
+        console.log(snapShot)
+    }
+    getSnapshotBeforeUpdate(prevProps,prevState){
+        console.log('prevProps:',prevProps)
+        console.log('prevState:',prevState)
+        return 123
+    }
     render() { 
         
         return ( 
