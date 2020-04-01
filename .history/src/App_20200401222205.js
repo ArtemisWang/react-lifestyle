@@ -12,7 +12,7 @@ class App extends Component {
         
         return ( 
             <div>
-                <AppChild color={this.state.color}/>
+                <AppChild />
                 <button onClick={this.handleColor}>变换颜色</button>
             </div>
          );

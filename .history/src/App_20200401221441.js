@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AppChild from './AppChild'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -12,16 +11,15 @@ class App extends Component {
         
         return ( 
             <div>
-                <AppChild color={this.state.color}/>
+                <div style={{height:'100px',width:'100px',border:'solid red 3px',background:this.state.color}}></div>
                 <button onClick={this.handleColor}>变换颜色</button>
             </div>
          );
     }
-    handleColor(){
+    handleColor(e){
         this.setState({
-            color:this.state.color==="black"?"red":"black",
+            color:"black"?"red":"black"
         })
-        console.log(this.state.color)
     }
 }
  
