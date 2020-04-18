@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import emitter from './events'
 import AppChild from './AppChild'
-import List from './List';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -27,9 +26,6 @@ class App extends Component {
             <div>
                 <AppChild color={this.state.color}/>
                 <button onClick={this.handleColor}>变换颜色</button>
-                <List 
-                    list={[{text:1},{text:2}]}
-                />
             </div>
          );
     }

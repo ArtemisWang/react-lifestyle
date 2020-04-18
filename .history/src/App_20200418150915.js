@@ -27,9 +27,10 @@ class App extends Component {
             <div>
                 <AppChild color={this.state.color}/>
                 <button onClick={this.handleColor}>变换颜色</button>
-                <List 
-                    list={[{text:1},{text:2}]}
-                />
+                <List list={[
+                    {text:1},
+                    {text:2}
+                    ]}/>
             </div>
          );
     }

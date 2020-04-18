@@ -29,6 +29,7 @@ class App extends Component {
                 <button onClick={this.handleColor}>变换颜色</button>
                 <List 
                     list={[{text:1},{text:2}]}
+                    emitter
                 />
             </div>
          );
