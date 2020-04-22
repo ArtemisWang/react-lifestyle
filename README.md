@@ -36,3 +36,7 @@
 2. 构建方法：属性代理、反向继承
 3. 属性代理可以实现功能：控制props、通过refs使用引用、抽象state、使用其他元素包裹WrappedComponent
 4. 反向继承可以实现功能：渲染劫持、
+
+## 3-高阶组件实现动态加载实例(属性代理方式)
+1. utils/AsyncComponent.js
+2. utils/AsyncComponent_.js
