@@ -40,3 +40,10 @@
 ## 3-高阶组件实现动态加载实例(属性代理方式)
 1. utils/AsyncComponent.js
 2. utils/AsyncComponent_.js
+
+## 4-高阶组件命名继承
+1. utils/getDisplayName.js
+2. recompose库
+
+## 5-高阶组件传递参数
+HOCFactoryFactory.js
