@@ -1,4 +1,4 @@
-# 关于React新生命周期的测试
+# 一. 关于React新生命周期的测试
 ## 1-getDerivedStateFromProps
 1. 适用于子组件自身存在状态，且该状态值依赖于父组件传props的情况，同时子组件自身也能控制自己的状态
 2. 这样其实是有异议的，状态应该小却精，如果组件自身就能够控制自己的状态不应把控制权提升到父组件实现
@@ -8,7 +8,7 @@
 1. 需要包含一个返回值，返回值会传到componentDidUpdate(prevProps,prevState,snapShot)中的第三个参数中
 2. 此周期在render之后执行，如其名一样，只是拍照，不建议做其他逻辑编写，应该转到componentDidUpdate中写
 
-# 组件间的通讯方式
+# 二. 组件间的通讯方式
 ## 1-父组件向子组件通讯
 父组件通过props向子组件传递需要的信息
 
@@ -25,7 +25,7 @@
 2. List组件中调用自定义事件，App组件中定义自定义事件，两者中的emitter都是引用自单例模式的EventEmitter实例。
 3. Pub/Sub模式，利用全局对象来保存事件，用广播的方式去处理事件。
 
-# 组件间抽象：mixin和高阶组件，用于抽象出需要被不同组件公用的功能
+# 三. 组件间抽象：mixin和高阶组件，用于抽象出需要被不同组件公用的功能
 ## 1-mixin
 1. 本质：多重继承，用赋值的方式将mixin对象里的方法挂载到原对象上。
 2. 但在es6 class方式定义的组件中无法使用mixin。
@@ -49,7 +49,7 @@
 HOCFactoryFactory.js
 
 
-# 组件性能优化
+# 四. 组件性能优化
 ## 1-PureRender减少渲染(最重要最常见的性能优化方法)
 1. 原理：重新实现shouldComponentUpdate生命周期方法，让当前传入的props和state与之前的作浅比较，相同则返回false
 2. 使用：PureRenderComponent.js，将App组件中handleColor中更新状态部分注释，这样每次渲染传递给PureRenderComponent的props是一样的，测试结果显示确实没有重复渲染
