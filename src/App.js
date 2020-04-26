@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import emitter from './events'
 import AppChild from './AppChild'
 import List from './List';
+import PureRenderComponent from './PureRenderComponent';
+
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            color:"black",
+            color:"pink",
         }
         this.handleColor=this.handleColor.bind(this)
     }
@@ -30,6 +32,7 @@ class App extends Component {
                 <List 
                     list={[{text:1},{text:2}]}
                 />
+                <PureRenderComponent color={this.state.color}/>
             </div>
          );
     }

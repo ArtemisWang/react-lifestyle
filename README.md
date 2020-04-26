@@ -47,3 +47,9 @@
 
 ## 5-高阶组件传递参数
 HOCFactoryFactory.js
+
+
+# 组件性能优化
+## 1-PureRender减少渲染(最重要最常见的性能优化方法)
+1. 原理：重新实现shouldComponentUpdate生命周期方法，让当前传入的props和state与之前的作浅比较，相同则返回false
+2. 使用：PureRenderComponent.js，将App组件中handleColor中更新状态部分注释，这样每次渲染传递给PureRenderComponent的props是一样的，测试结果显示确实没有重复渲染
