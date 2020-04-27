@@ -53,3 +53,7 @@ HOCFactoryFactory.js
 ## 1-PureRender减少渲染(最重要最常见的性能优化方法)
 1. 原理：重新实现shouldComponentUpdate生命周期方法，让当前传入的props和state与之前的作浅比较，相同则返回false
 2. 使用：PureRenderComponent.js，将App组件中handleColor中更新状态部分注释，这样每次渲染传递给PureRenderComponent的props是一样的，测试结果显示确实没有重复渲染
+
+## 2-Immutable Data
+1. Immutable Data指一旦创建，就不能再更改的数据类型。对Immutable对象进行修改、添加或删除操作，都会返回一个新的Immutable对象。
+2. Immutable.is会比较两个对象的hashCode或valueOf，这样避免了深层遍历比较，性能较好。
