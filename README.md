@@ -57,3 +57,7 @@ HOCFactoryFactory.js
 ## 2-Immutable Data
 1. Immutable Data指一旦创建，就不能再更改的数据类型。对Immutable对象进行修改、添加或删除操作，都会返回一个新的Immutable对象。
 2. Immutable.is会比较两个对象的hashCode或valueOf，这样避免了深层遍历比较，性能较好。
+3. 创建：Immutable.Map({a:1,b:2}), Immutable.List([1,2,3])
+4. 比较：Immutable.is(map1, map2)
+5. 更新：map1.update('a',v=>v+1)
+
