@@ -61,3 +61,8 @@ HOCFactoryFactory.js
 4. 比较：Immutable.is(map1, map2)
 5. 更新：map1.update('a',v=>v+1)
 
+## 3-react-addons-perf
+1. Perf.start()和Perf.stop()会将组件渲染的各个阶段事件统计出来
+2. Perf.printInclusive(measurements):所有阶段的时间
+3. Perf.printExclusive(measurements):不包挂载组件的时间
+4. Perf.printWasted(measurements):检测渲染的内容保持不变的组件
