@@ -66,3 +66,10 @@ HOCFactoryFactory.js
 2. Perf.printInclusive(measurements):所有阶段的时间
 3. Perf.printExclusive(measurements):不包挂载组件的时间
 4. Perf.printWasted(measurements):检测渲染的内容保持不变的组件
+
+## 4-key
+1. 动态子项必须设置key值，用来做Virtual DOM diff
+2. key的设置原则：独一无二，尽量不用遍历和随机值
+
+
+# 五. 
